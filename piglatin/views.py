@@ -23,7 +23,7 @@ def translate(request):
             translation += word[0]
             # ay
             translation += 'ay '
-            
 
 
-    return HttpResponse(translation)
+
+    return render(request, 'translate.html', {"original":original, "translation":translation})
